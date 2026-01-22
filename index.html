@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polkassembly | The Governance Engine (2019-2026)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+</head>
+<body>
+    <!-- Matrix Rain Background -->
+    <canvas id="matrix-bg"></canvas>
+    
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="POLKASSEMBLY">POLKASSEMBLY</h1>
+            </div>
+            <p class="hero-subtitle">THE GOVERNANCE ENGINE</p>
+            <div class="hero-years">
+                <span class="year-start">2019</span>
+                <span class="year-divider">—————</span>
+                <span class="year-end">2026</span>
+            </div>
+            <div class="hero-tagline">
+                <span class="typewriter">> Decentralizing democracy, one referendum at a time_</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- Farewell Quote Section -->
+    <section class="farewell-quote">
+        <div class="container">
+            <div class="quote-block">
+                <div class="quote-mark">"</div>
+                <blockquote>
+                    We built the stage, but you wrote the play. For six years, Polkassembly was the bridge between code and consensus. Thank you for debating, voting, and building the future of decentralized democracy with us.
+                </blockquote>
+                <cite>— The Polkassembly Team</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats Grid -->
+    <section class="impact-stats">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">//</span> IMPACT METRICS
+            </h2>
+            <div class="stats-grid">
+                <div class="stat-card stat-proposals">
+                    <div class="stat-icon">📜</div>
+                    <div class="stat-number" data-target="2500">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">PROPOSALS HOSTED</div>
+                    <div class="stat-detail">Polkadot • Kusama • Parachains</div>
+                </div>
+                <div class="stat-card stat-treasury">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-prefix">$</div>
+                    <div class="stat-number" data-target="140">0</div>
+                    <div class="stat-suffix">M+</div>
+                    <div class="stat-label">TREASURY FACILITATED</div>
+                    <div class="stat-detail">~20M+ DOT Distributed</div>
+                </div>
+                <div class="stat-card stat-teams">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-number" data-target="350">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">TEAMS FUNDED</div>
+                    <div class="stat-detail">Nova • Talisman • Subscan & more</div>
+                </div>
+                <div class="stat-card stat-networks">
+                    <div class="stat-icon">🌐</div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">NETWORKS SUPPORTED</div>
+                    <div class="stat-detail">Polkadot • Kusama • Parachains</div>
+                </div>
+                <div class="stat-card stat-users">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="45000">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">REGISTERED USERS</div>
+                    <div class="stat-detail">Verified On-Chain Accounts</div>
+                </div>
+                <div class="stat-card stat-mau">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-number" data-target="140000">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">PEAK MONTHLY USERS</div>
+                    <div class="stat-detail">OpenGov Transition Period</div>
+                </div>
+                <div class="stat-card stat-discussions">
+                    <div class="stat-icon">💬</div>
+                    <div class="stat-number" data-target="25000">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">DISCUSSIONS</div>
+                    <div class="stat-detail">The Town Square of Polkadot</div>
+                </div>
+                <div class="stat-card stat-referenda">
+                    <div class="stat-icon">🗳️</div>
+                    <div class="stat-number" data-target="1830">0</div>
+                    <div class="stat-suffix">+</div>
+                    <div class="stat-label">OPENGOV REFERENDA</div>
+                    <div class="stat-detail">Polkadot Alone by 2026</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tree Visualization -->
+    <section class="tree-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">//</span> THE GOVERNANCE TREE
+            </h2>
+            <p class="section-subtitle">From roots of code to fruits of consensus</p>
+            
+            <div class="tree-visualization">
+                <div class="tree-container">
+                    <!-- SVG Tree -->
+                    <svg class="tree-svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid meet">
+                        <!-- Roots (GitHub/Code) -->
+                        <g class="tree-roots">
+                            <path class="root-path" d="M400 850 Q350 800 280 820 Q200 840 150 800" />
+                            <path class="root-path" d="M400 850 Q380 820 350 830 Q300 850 250 820" />
+                            <path class="root-path" d="M400 850 Q420 820 450 830 Q500 850 550 820" />
+                            <path class="root-path" d="M400 850 Q450 800 520 820 Q600 840 650 800" />
+                        </g>
+                        
+                        <!-- Trunk (Platform) -->
+                        <g class="tree-trunk">
+                            <path class="trunk-path" d="M400 850 Q400 700 400 600 Q400 500 400 400" />
+                            <path class="trunk-glow" d="M400 850 Q400 700 400 600 Q400 500 400 400" />
+                        </g>
+                        
+                        <!-- Branches (Proposals) -->
+                        <g class="tree-branches">
+                            <path class="branch-path" d="M400 400 Q350 350 280 320" />
+                            <path class="branch-path" d="M400 400 Q320 380 250 400" />
+                            <path class="branch-path" d="M400 400 Q450 350 520 320" />
+                            <path class="branch-path" d="M400 400 Q480 380 550 400" />
+                            <path class="branch-path" d="M400 350 Q350 300 300 250" />
+                            <path class="branch-path" d="M400 350 Q450 300 500 250" />
+                            <path class="branch-path" d="M400 300 Q380 250 350 200" />
+                            <path class="branch-path" d="M400 300 Q420 250 450 200" />
+                        </g>
+                        
+                        <!-- Leaves/Fruits (Community) -->
+                        <g class="tree-fruits">
+                            <circle class="fruit" cx="280" cy="320" r="25" />
+                            <circle class="fruit" cx="250" cy="400" r="20" />
+                            <circle class="fruit" cx="520" cy="320" r="25" />
+                            <circle class="fruit" cx="550" cy="400" r="20" />
+                            <circle class="fruit" cx="300" cy="250" r="22" />
+                            <circle class="fruit" cx="500" cy="250" r="22" />
+                            <circle class="fruit" cx="350" cy="200" r="18" />
+                            <circle class="fruit" cx="450" cy="200" r="18" />
+                            <circle class="fruit" cx="400" cy="150" r="30" />
+                        </g>
+                        
+                        <!-- Particles -->
+                        <g class="tree-particles">
+                            <circle class="particle" cx="200" cy="300" r="3" />
+                            <circle class="particle" cx="600" cy="350" r="4" />
+                            <circle class="particle" cx="350" cy="180" r="3" />
+                            <circle class="particle" cx="450" cy="160" r="4" />
+                            <circle class="particle" cx="220" cy="420" r="3" />
+                            <circle class="particle" cx="580" cy="280" r="3" />
+                        </g>
+                    </svg>
+                    
+                    <!-- Labels -->
+                    <div class="tree-labels">
+                        <div class="tree-label label-roots">
+                            <span class="label-icon">⚙️</span>
+                            <span class="label-text">14,500+ Commits</span>
+                            <span class="label-sub">60+ Contributors</span>
+                        </div>
+                        <div class="tree-label label-trunk">
+                            <span class="label-icon">🏛️</span>
+                            <span class="label-text">50+ Networks</span>
+                            <span class="label-sub">The Platform</span>
+                        </div>
+                        <div class="tree-label label-branches">
+                            <span class="label-icon">📜</span>
+                            <span class="label-text">2,500+ Proposals</span>
+                            <span class="label-sub">Governance Branches</span>
+                        </div>
+                        <div class="tree-label label-fruits">
+                            <span class="label-icon">💰</span>
+                            <span class="label-text">$140M+ Distributed</span>
+                            <span class="label-sub">Treasury Fruits</span>
+                        </div>
+                        <div class="tree-label label-leaves">
+                            <span class="label-icon">🌱</span>
+                            <span class="label-text">45K+ Users</span>
+                            <span class="label-sub">Community Life</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">//</span> MILESTONE TIMELINE
+            </h2>
+            
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-item" data-year="2019">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2019</span>
+                        <h3>Genesis</h3>
+                        <p>Polkassembly concept born. Vision for decentralized governance UI takes shape.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2020</span>
+                        <h3>First UI for Kusama Governance</h3>
+                        <p>Launch of Gov1 interface. The first bridge between citizens and on-chain democracy.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="2021">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2021</span>
+                        <h3>Parachain Slot Auctions</h3>
+                        <p>Facilitated the first crowdloan campaigns. Helped projects win their place in the ecosystem.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="2023">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023</span>
+                        <h3>The Great Migration to OpenGov</h3>
+                        <p>Gov2 transition. Processed 100+ proposals in the first month. A new era of governance.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024</span>
+                        <h3>Delegation Dashboard</h3>
+                        <p>Unlocked 30M+ DOT in voting power. Empowering conviction-based democracy at scale.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025</span>
+                        <h3>2,000th Referendum</h3>
+                        <p>Polkadot reaches a historic milestone. 2,000 referenda processed through our platform.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="2026">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2026</span>
+                        <h3>Farewell</h3>
+                        <p>The curtain falls. But decentralized governance lives on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engineering Section -->
+    <section class="engineering-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">//</span> OPEN SOURCE LEGACY
+            </h2>
+            
+            <div class="github-stats">
+                <div class="github-card main-repo">
+                    <div class="repo-header">
+                        <span class="repo-icon">📦</span>
+                        <span class="repo-name">github.com/polkassembly</span>
+                    </div>
+                    <div class="repo-stats">
+                        <div class="repo-stat">
+                            <span class="stat-value">14,500+</span>
+                            <span class="stat-label">Total Commits</span>
+                        </div>
+                        <div class="repo-stat">
+                            <span class="stat-value">60+</span>
+                            <span class="stat-label">Contributors</span>
+                        </div>
+                    </div>
+                    <div class="repo-breakdown">
+                        <div class="breakdown-item">
+                            <span class="breakdown-name">polkassembly-v2</span>
+                            <div class="breakdown-bar">
+                                <div class="breakdown-fill" style="--width: 28%"></div>
+                            </div>
+                            <span class="breakdown-value">~4,000 commits</span>
+                        </div>
+                        <div class="breakdown-item">
+                            <span class="breakdown-name">legacy (next.js)</span>
+                            <div class="breakdown-bar">
+                                <div class="breakdown-fill" style="--width: 72%"></div>
+                            </div>
+                            <span class="breakdown-value">~10,500 commits</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Subsquid</span>
+                        <span class="tech-tag">Substrate</span>
+                        <span class="tech-tag">TypeScript</span>
+                    </div>
+                    <a href="https://github.com/polkassembly" class="github-link" target="_blank" rel="noopener">
+                        <span>View Repository</span>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Networks Supported -->
+    <section class="networks-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">//</span> NETWORKS POWERED
+            </h2>
+            <p class="section-subtitle">50+ chains trusted Polkassembly for governance</p>
+            
+            <div class="networks-grid">
+                <div class="network-card primary">
+                    <span class="network-name">Polkadot</span>
+                    <span class="network-badge">Primary</span>
+                </div>
+                <div class="network-card primary">
+                    <span class="network-name">Kusama</span>
+                    <span class="network-badge">Primary</span>
+                </div>
+                <div class="network-card">
+                    <span class="network-name">Moonbeam</span>
+                </div>
+                <div class="network-card">
+                    <span class="network-name">Moonriver</span>
+                </div>
+                <div class="network-card">
+                    <span class="network-name">Acala</span>
+                </div>
+                <div class="network-card">
+                    <span class="network-name">HydraDX</span>
+                </div>
+                <div class="network-card">
+                    <span class="network-name">Bifrost</span>
+                </div>
+                <div class="network-card">
+                    <span class="network-name">Phala</span>
+                </div>
+                <div class="network-card">
+                    <span class="network-name">Interlay</span>
+                </div>
+                <div class="network-card more">
+                    <span class="network-name">+40 More</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">//</span> THE HUMANS BEHIND THE CODE
+            </h2>
+            
+            <div class="team-grid">
+                <div class="team-category founders">
+                    <h3 class="category-title">👑 Founders</h3>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <div class="member-avatar">JS</div>
+                            <div class="member-info">
+                                <span class="member-name">Jaskirat Singh</span>
+                                <span class="member-role">Co-Founder</span>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">NR</div>
+                            <div class="member-info">
+                                <span class="member-name">Nikhil Ranjan</span>
+                                <span class="member-role">Co-Founder</span>
+                                <div class="member-links">
+                                    <a href="https://github.com/niklabh" target="_blank" rel="noopener">GitHub</a>
+                                    <a href="https://twitter.com/niklabh" target="_blank" rel="noopener">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-category developers">
+                    <h3 class="category-title">⚡ Key Developers</h3>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <div class="member-avatar">AS</div>
+                            <div class="member-info">
+                                <span class="member-name">Ashutosh Singh</span>
+                                <span class="member-role">Developer</span>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">HS</div>
+                            <div class="member-info">
+                                <span class="member-name">Hritik Soni</span>
+                                <span class="member-role">Developer</span>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">JS</div>
+                            <div class="member-info">
+                                <span class="member-name">Jaspreet Singh</span>
+                                <span class="member-role">Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-category community">
+                    <h3 class="category-title">🌍 Community & Growth</h3>
+                    <div class="team-members">
+                        <div class="team-member">
+                            <div class="member-avatar">GM</div>
+                            <div class="member-info">
+                                <span class="member-name">Guto Martino</span>
+                                <span class="member-role">Ambassador</span>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">M</div>
+                            <div class="member-info">
+                                <span class="member-name">Matai</span>
+                                <span class="member-role">Community</span>
+                            </div>
+                        </div>
+                        <div class="team-member">
+                            <div class="member-avatar">D</div>
+                            <div class="member-info">
+                                <span class="member-name">Deepanshu</span>
+                                <span class="member-role">Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-category contributors">
+                    <h3 class="category-title">🤝 60+ Contributors</h3>
+                    <p class="contributors-note">And all the amazing developers, designers, and community members who contributed to Polkassembly over the years.</p>
+                    <a href="https://github.com/polkassembly/polkassembly/graphs/contributors" class="contributors-link" target="_blank" rel="noopener">
+                        View All Contributors on GitHub →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-prefix">//</span> KEY PARTNERS
+            </h2>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <span class="partner-name">Parity Technologies</span>
+                    <span class="partner-role">Core Infrastructure</span>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-name">Web3 Foundation</span>
+                    <span class="partner-role">Ecosystem Support</span>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-name">Subsquid</span>
+                    <span class="partner-role">Indexing Infrastructure</span>
+                </div>
+                <div class="partner-card">
+                    <span class="partner-name">KILT Protocol</span>
+                    <span class="partner-role">Identity Solutions</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cypherpunk Manifesto -->
+    <section class="manifesto-section">
+        <div class="container">
+            <div class="manifesto-content">
+                <div class="manifesto-header">
+                    <span class="manifesto-icon">⚡</span>
+                    <h2>ON DECENTRALIZED GOVERNANCE</h2>
+                </div>
+                <div class="manifesto-text">
+                    <p>
+                        <span class="highlight">Cypherpunks write code.</span> We wrote the interface to a new kind of democracy.
+                    </p>
+                    <p>
+                        In a world where power tends to centralize, we built tools for the opposite: <span class="highlight">trustless coordination</span>, <span class="highlight">transparent treasuries</span>, and <span class="highlight">permissionless participation</span>.
+                    </p>
+                    <p>
+                        OpenGov wasn't just a protocol upgrade—it was a statement. That governance can be <span class="highlight">open</span>, <span class="highlight">continuous</span>, and <span class="highlight">owned by no one</span>.
+                    </p>
+                    <p>
+                        We facilitated $140 million in collective decisions. Not through boardrooms or banks, but through <span class="highlight">cryptographic consensus</span> and <span class="highlight">community conviction</span>.
+                    </p>
+                    <p class="manifesto-closing">
+                        The experiment continues. The infrastructure remains. The code is open.<br>
+                        <span class="highlight">Decentralization is not a destination, it is a journey.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">POLKASSEMBLY</span>
+                    <span class="logo-years">2019 — 2026</span>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="https://github.com/polkassembly" target="_blank" rel="noopener">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="https://twitter.com/niklabh" target="_blank" rel="noopener">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                        @niklabh
+                    </a>
+                    <a href="mailto:niklabh811@gmail.com">
+                        <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Contact
+                    </a>
+                </div>
+                
+                <div class="footer-signature">
+                    <p class="signature-text">
+                        <span class="terminal-prompt">$</span> echo "Thank you, Polkadot Community"
+                    </p>
+                    <p class="signature-hash">
+                        Built with ❤️ for decentralized democracy
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>This page was crafted as a farewell memoir to the community.</p>
+                <p class="footer-final">Decentralization is not a destination, it is a journey.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
