@@ -46,28 +46,48 @@
     <section class="impact-stats">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">//</span> IMPACT METRICS
+                <span class="title-prefix">$</span> <span class="title-command">cat metrics.txt</span> <span class="title-comment"># Impact Metrics</span>
             </h2>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Networks supported</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">5,000+</div>
-                    <div class="stat-label">Proposals hosted</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">10,000+</div>
-                    <div class="stat-label">Discussions / motions</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">250,000+</div>
-                    <div class="stat-label">Voters</div>
+            <div class="stats-terminal">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">polkassembly@metrics</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">polkassembly --stats</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div class="stat-row">
+                                <span class="stat-key">networks_supported:</span>
+                                <span class="stat-value">50+</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-key">proposals_hosted:</span>
+                                <span class="stat-value">5,000+</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-key">discussions_motions:</span>
+                                <span class="stat-value">10,000+</span>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-key">total_voters:</span>
+                                <span class="stat-value">250,000+</span>
+                            </div>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-cursor">_</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="metrics-narrative">
-                <p>These numbers represent six years of enabling decentralized, transparent, and inclusive governance. From protocol updates to treasury decisions, every vote was recorded on-chain, making the process verifiable and accessible to anyone with tokens.</p>
+                <p class="terminal-comment">// Six years of on-chain governance. Every vote recorded. Every decision verifiable.</p>
             </div>
         </div>
     </section>
@@ -76,57 +96,38 @@
     <section class="timeline-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">//</span> MILESTONE TIMELINE
+                <span class="title-prefix">$</span> <span class="title-command">git log --oneline</span> <span class="title-comment"># Timeline</span>
             </h2>
             
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-item" data-year="2020">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2020</span>
-                        <p>First governance UX at scale — Launch of Gov1 interface bridging citizens and on-chain democracy.</p>
+            <div class="timeline-terminal">
+                <div class="git-log">
+                    <div class="git-commit">
+                        <span class="commit-hash">2020</span>
+                        <span class="commit-message">First governance UX at scale — Launch of Gov1 interface</span>
                     </div>
-                </div>
-                
-                <div class="timeline-item" data-year="2021">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2021</span>
-                        <p>Parachain-era governance — Facilitated crowdloan campaigns and ecosystem participation.</p>
+                    <div class="git-commit">
+                        <span class="commit-hash">2021</span>
+                        <span class="commit-message">Parachain-era governance — Crowdloan campaigns & ecosystem participation</span>
                     </div>
-                </div>
-                
-                <div class="timeline-item" data-year="2023">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2023</span>
-                        <p>OpenGov migration — Processed 100+ proposals in the first month of Gov2 transition.</p>
+                    <div class="git-commit">
+                        <span class="commit-hash">2022</span>
+                        <span class="commit-message">Scaling infrastructure — 800+ treasury proposals, OpenGov prep</span>
                     </div>
-                </div>
-                
-                <div class="timeline-item" data-year="2024">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2024</span>
-                        <p>Delegation / participation tooling — Unlocked voting power and conviction-based democracy at scale.</p>
+                    <div class="git-commit">
+                        <span class="commit-hash">2023</span>
+                        <span class="commit-message">OpenGov migration — 100+ proposals in first month of Gov2</span>
                     </div>
-                </div>
-                
-                <div class="timeline-item" data-year="2025">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2025</span>
-                        <p>Mature OpenGov cadence — Platform reaches 2,000 referenda milestone on Polkadot.</p>
+                    <div class="git-commit">
+                        <span class="commit-hash">2024</span>
+                        <span class="commit-message">Delegation tooling — Conviction-based democracy at scale</span>
                     </div>
-                </div>
-                
-                <div class="timeline-item" data-year="2026">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2026</span>
-                        <p>Farewell / archive — The curtain falls, but decentralized governance lives on.</p>
+                    <div class="git-commit">
+                        <span class="commit-hash">2025</span>
+                        <span class="commit-message">Mature OpenGov — 2,000 referenda milestone on Polkadot</span>
+                    </div>
+                    <div class="git-commit">
+                        <span class="commit-hash">2026</span>
+                        <span class="commit-message">Archive — Decentralized governance lives on</span>
                     </div>
                 </div>
             </div>
@@ -137,36 +138,49 @@
     <section class="engineering-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">//</span> OPEN SOURCE LEGACY
+                <span class="title-prefix">$</span> <span class="title-command">gh repo view</span> <span class="title-comment"># Open Source Legacy</span>
             </h2>
             
-            <div class="github-stats">
-                <div class="github-card main-repo">
-                    <div class="repo-header">
-                        <span class="repo-icon">📦</span>
-                        <span class="repo-name">github.com/polkassembly</span>
+            <div class="github-terminal">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">github.com/polkassembly</span>
                     </div>
-                    <div class="repo-stats">
-                        <div class="repo-stat">
-                            <span class="stat-value">15,000+</span>
-                            <span class="stat-label">Total Commits</span>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">gh repo view polkassembly/polkassembly --json commits,contributors</span>
                         </div>
-                        <div class="repo-stat">
-                            <span class="stat-value">60+</span>
-                            <span class="stat-label">Contributors</span>
+                        <div class="terminal-output">
+                            <div class="repo-stat-line">
+                                <span class="stat-key">commits:</span>
+                                <span class="stat-value">15,000+</span>
+                            </div>
+                            <div class="repo-stat-line">
+                                <span class="stat-key">contributors:</span>
+                                <span class="stat-value">60+</span>
+                            </div>
+                            <div class="repo-stat-line">
+                                <span class="stat-key">status:</span>
+                                <span class="stat-value">shipped and maintained in public</span>
+                            </div>
                         </div>
-                    </div>
-                    <p class="repo-description">Shipped and maintained in public.</p>
-                    <div class="repo-links">
-                        <a href="https://github.com/polkassembly" class="github-link" target="_blank" rel="noopener">
-                            <span>View Organization →</span>
-                        </a>
-                        <div class="repo-links-secondary">
-                            <a href="https://github.com/polkassembly/polkassembly" class="github-link repo-link-secondary" target="_blank" rel="noopener">
-                                <span>polkassembly (legacy)</span>
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">open https://github.com/polkassembly</span>
+                        </div>
+                        <div class="repo-links-terminal">
+                            <a href="https://github.com/polkassembly" class="repo-link-terminal" target="_blank" rel="noopener">
+                                <span class="link-prefix">→</span> github.com/polkassembly
                             </a>
-                            <a href="https://github.com/polkassembly/polkassembly-v2" class="github-link repo-link-secondary" target="_blank" rel="noopener">
-                                <span>polkassembly-v2</span>
+                            <a href="https://github.com/polkassembly/polkassembly" class="repo-link-terminal" target="_blank" rel="noopener">
+                                <span class="link-prefix">→</span> polkassembly (legacy)
+                            </a>
+                            <a href="https://github.com/polkassembly/polkassembly-v2" class="repo-link-terminal" target="_blank" rel="noopener">
+                                <span class="link-prefix">→</span> polkassembly-v2
                             </a>
                         </div>
                     </div>
@@ -179,40 +193,57 @@
     <section class="networks-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">//</span> NETWORKS POWERED
+                <span class="title-prefix">$</span> <span class="title-command">cat networks.txt</span> <span class="title-comment"># Networks Powered</span>
             </h2>
             
-            <div class="networks-grid">
-                <div class="network-card primary">
-                    <span class="network-name">Polkadot</span>
-                </div>
-                <div class="network-card primary">
-                    <span class="network-name">Kusama</span>
-                </div>
-                <div class="network-card">
-                    <span class="network-name">Moonbeam</span>
-                </div>
-                <div class="network-card">
-                    <span class="network-name">Moonriver</span>
-                </div>
-                <div class="network-card">
-                    <span class="network-name">Acala</span>
-                </div>
-                <div class="network-card">
-                    <span class="network-name">HydraDX</span>
-                </div>
-                <div class="network-card">
-                    <span class="network-name">Bifrost</span>
-                </div>
-                <div class="network-card">
-                    <span class="network-name">Phala</span>
-                </div>
-                <div class="network-card">
-                    <span class="network-name">Interlay</span>
-                </div>
-                <div class="network-card more-networks">
-                    <span class="network-name">+40 More</span>
-                    <span class="network-subtitle">Networks</span>
+            <div class="networks-terminal">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">polkassembly@networks</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">polkassembly --list-networks</span>
+                        </div>
+                        <div class="networks-list">
+                            <div class="network-item primary">
+                                <span class="network-badge">[PRIMARY]</span>
+                                <span class="network-name">Polkadot</span>
+                            </div>
+                            <div class="network-item primary">
+                                <span class="network-badge">[PRIMARY]</span>
+                                <span class="network-name">Kusama</span>
+                            </div>
+                            <div class="network-item">
+                                <span class="network-name">Moonbeam</span>
+                            </div>
+                            <div class="network-item">
+                                <span class="network-name">Moonriver</span>
+                            </div>
+                            <div class="network-item">
+                                <span class="network-name">Acala</span>
+                            </div>
+                            <div class="network-item">
+                                <span class="network-name">HydraDX</span>
+                            </div>
+                            <div class="network-item">
+                                <span class="network-name">Bifrost</span>
+                            </div>
+                            <div class="network-item">
+                                <span class="network-name">Phala</span>
+                            </div>
+                            <div class="network-item">
+                                <span class="network-name">Interlay</span>
+                            </div>
+                            <div class="network-item muted">
+                                <span class="network-name">+40 more networks</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,24 +253,96 @@
     <section class="people-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-prefix">//</span> PEOPLE
+                <span class="title-prefix">$</span> <span class="title-command">cat people.txt</span> <span class="title-comment"># People</span>
             </h2>
             
             <div class="people-content">
                 <!-- Founders -->
                 <div class="team-section founders-section">
-                    <h3 class="team-section-title">Founders</h3>
-                    <div class="founders-grid">
-                        <div class="founder-card">
-                            <div class="founder-avatar">JS</div>
-                            <div class="founder-info">
-                                <h4 class="founder-name">Jaskirat Singh</h4>
+                    <h3 class="team-section-title"><span class="title-prefix">$</span> <span class="title-command">whoami</span> <span class="title-comment"># Founders</span></h3>
+                    <div class="founders-terminal">
+                        <div class="founder-terminal-card">
+                            <div class="terminal-window">
+                                <div class="terminal-header">
+                                    <span class="terminal-dot"></span>
+                                    <span class="terminal-dot"></span>
+                                    <span class="terminal-dot"></span>
+                                    <span class="terminal-title">jaski@polkassembly</span>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-command">whoami</span>
+                                    </div>
+                                    <div class="terminal-output">
+                                        <div class="founder-info-terminal">
+                                            <div class="founder-name-terminal">Jaski S</div>
+                                            <div class="founder-role-terminal">CEO</div>
+                                        </div>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-command">cat statement.txt</span>
+                                    </div>
+                                    <div class="terminal-output">
+                                        <div class="founder-statement-terminal">
+                                            <h4 class="founder-statement-title">Beyond the Code</h4>
+                                            <p>Governance is often treated as a technical problem to be solved, but I have always seen it as a human one. My focus with Polkassembly was to ensure that the technology never got in the way of the debate. We didn't just want to count votes; we wanted to ensure every voice had a place to be heard. Seeing this community mature into a thoughtful, self-correcting organism has been the privilege of my career. The platform is closing, but the democratic culture we fostered is here to stay.</p>
+                                        </div>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-command">cat .links</span>
+                                    </div>
+                                    <div class="terminal-output">
+                                        <div class="founder-social-terminal">
+                                            <a href="https://www.linkedin.com/in/jaskirat21/" target="_blank" rel="noopener" class="social-link-terminal">linkedin.com/in/jaskirat21</a>
+                                            <a href="https://x.com/jas_jaski" target="_blank" rel="noopener" class="social-link-terminal">x.com/jas_jaski</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="founder-card">
-                            <div class="founder-avatar">NR</div>
-                            <div class="founder-info">
-                                <h4 class="founder-name">Nikhil Ranjan</h4>
+                        <div class="founder-terminal-card">
+                            <div class="terminal-window">
+                                <div class="terminal-header">
+                                    <span class="terminal-dot"></span>
+                                    <span class="terminal-dot"></span>
+                                    <span class="terminal-dot"></span>
+                                    <span class="terminal-title">nikhil@polkassembly</span>
+                                </div>
+                                <div class="terminal-body">
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-command">whoami</span>
+                                    </div>
+                                    <div class="terminal-output">
+                                        <div class="founder-info-terminal">
+                                            <div class="founder-name-terminal">Nikhil Ranjan</div>
+                                            <div class="founder-role-terminal">CTO</div>
+                                        </div>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-command">cat statement.txt</span>
+                                    </div>
+                                    <div class="terminal-output">
+                                        <div class="founder-statement-terminal">
+                                            <h4 class="founder-statement-title">Engineering Neutrality</h4>
+                                            <p>In a decentralized world, the tools we use must be as objective as the protocols they serve. My challenge was to build an infrastructure that remained neutral while handling the friction of high-stakes decision-making. We designed Polkassembly to be resilient and transparent—a reliable layer between the chain and the people. I am incredibly proud that when the ecosystem needed clarity, our software provided it.</p>
+                                        </div>
+                                    </div>
+                                    <div class="terminal-line">
+                                        <span class="terminal-prompt">$</span>
+                                        <span class="terminal-command">cat .links</span>
+                                    </div>
+                                    <div class="terminal-output">
+                                        <div class="founder-social-terminal">
+                                            <a href="https://www.linkedin.com/in/niklabh/" target="_blank" rel="noopener" class="social-link-terminal">linkedin.com/in/niklabh</a>
+                                            <a href="https://x.com/niklabh" target="_blank" rel="noopener" class="social-link-terminal">x.com/niklabh</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -247,48 +350,58 @@
 
                 <!-- Contributors -->
                 <div class="team-section founding-team-section">
-                    <h3 class="team-section-title">Contributors</h3>
-                    <div class="founding-team-grid">
-                        <div class="founding-member">
-                            <div class="member-avatar-small">AS</div>
-                            <div class="member-details">
-                                <span class="member-name-small">Ashutosh Singh</span>
-                                <span class="member-role-small">Developer</span>
+                    <h3 class="team-section-title"><span class="title-prefix">$</span> <span class="title-command">git shortlog -sn</span> <span class="title-comment"># Top Contributors</span></h3>
+                    <div class="contributors-terminal">
+                        <div class="terminal-window">
+                            <div class="terminal-header">
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-dot"></span>
+                                <span class="terminal-title">polkassembly@contributors</span>
                             </div>
-                        </div>
-                        <div class="founding-member">
-                            <div class="member-avatar-small">HS</div>
-                            <div class="member-details">
-                                <span class="member-name-small">Hritik Soni</span>
-                                <span class="member-role-small">Developer</span>
-                            </div>
-                        </div>
-                        <div class="founding-member">
-                            <div class="member-avatar-small">JS</div>
-                            <div class="member-details">
-                                <span class="member-name-small">Jaspreet Singh</span>
-                                <span class="member-role-small">Developer</span>
-                            </div>
-                        </div>
-                        <div class="founding-member">
-                            <div class="member-avatar-small">GM</div>
-                            <div class="member-details">
-                                <span class="member-name-small">Guto Martino</span>
-                                <span class="member-role-small">Ambassador</span>
-                            </div>
-                        </div>
-                        <div class="founding-member">
-                            <div class="member-avatar-small">M</div>
-                            <div class="member-details">
-                                <span class="member-name-small">Matai</span>
-                                <span class="member-role-small">Community</span>
-                            </div>
-                        </div>
-                        <div class="founding-member">
-                            <div class="member-avatar-small">D</div>
-                            <div class="member-details">
-                                <span class="member-name-small">Deepanshu</span>
-                                <span class="member-role-small">Growth</span>
+                            <div class="terminal-body">
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">git shortlog -sn | head -8</span>
+                                </div>
+                                <div class="contributors-list-terminal">
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">Mridul Kumar</span>
+                                        <a href="https://github.com/alphainfinitus" target="_blank" rel="noopener" class="contributor-link">@alphainfinitus</a>
+                                    </div>
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">Aadarsh</span>
+                                        <a href="https://github.com/aadarsh012" target="_blank" rel="noopener" class="contributor-link">@aadarsh012</a>
+                                    </div>
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">Aleem Alam</span>
+                                        <a href="https://github.com/AleemAlam" target="_blank" rel="noopener" class="contributor-link">@AleemAlam</a>
+                                    </div>
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">Jasmeet Singh</span>
+                                        <a href="https://github.com/jasmeets-6575" target="_blank" rel="noopener" class="contributor-link">@jasmeets-6575</a>
+                                    </div>
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">Vaibhav</span>
+                                        <a href="https://github.com/VAIBHAV-25" target="_blank" rel="noopener" class="contributor-link">@VAIBHAV-25</a>
+                                    </div>
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">V M Muthu</span>
+                                        <a href="https://github.com/vmmuthu31" target="_blank" rel="noopener" class="contributor-link">@vmmuthu31</a>
+                                    </div>
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">Rajdeep Singh</span>
+                                        <a href="https://github.com/rajdeep7Singh" target="_blank" rel="noopener" class="contributor-link">@rajdeep7Singh</a>
+                                    </div>
+                                    <div class="contributor-line">
+                                        <span class="contributor-name">Adetoye</span>
+                                        <a href="https://github.com/adetoye-dev" target="_blank" rel="noopener" class="contributor-link">@adetoye-dev</a>
+                                    </div>
+                                </div>
+                                <div class="terminal-line">
+                                    <span class="terminal-prompt">$</span>
+                                    <span class="terminal-command">open https://github.com/polkassembly/polkassembly/graphs/contributors</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -301,17 +414,27 @@
     <!-- Cypherpunk Manifesto -->
     <section class="manifesto-section">
         <div class="container">
-            <div class="manifesto-content">
-                <div class="manifesto-header">
-                    <h2>ON DECENTRALIZED GOVERNANCE</h2>
-                </div>
-                <div class="manifesto-text">
-                    <p>
-                        Polkassembly enabled decentralized, transparent, and inclusive governance for Polkadot, Kusama, and their parachains. We built the primary interface for on-chain governance—where proposals are debated, votes are cast, and decisions are recorded immutably on the blockchain.
-                    </p>
-                    <p>
-                        OpenGov demonstrated that governance can be open, continuous, and owned by no one. The infrastructure remains. The code is open. The work continues, and builders inherit the arena.
-                    </p>
+            <div class="manifesto-terminal">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-dot"></span>
+                        <span class="terminal-title">polkassembly@manifesto</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="terminal-prompt">$</span>
+                            <span class="terminal-command">cat README.md</span>
+                        </div>
+                        <div class="terminal-output">
+                            <div class="manifesto-content-terminal">
+                                <h3 class="manifesto-title-terminal">ON DECENTRALIZED GOVERNANCE</h3>
+                                <p>Polkassembly enabled decentralized, transparent, and inclusive governance for Polkadot, Kusama, and their parachains. We built the primary interface for on-chain governance—where proposals are debated, votes are cast, and decisions are recorded immutably on the blockchain.</p>
+                                <p>OpenGov demonstrated that governance can be open, continuous, and owned by no one. The infrastructure remains. The code is open. The work continues, and builders inherit the arena.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -333,13 +456,13 @@
                         </svg>
                         GitHub
                     </a>
-                    <a href="https://twitter.com/niklabh" target="_blank" rel="noopener">
+                    <a href="https://x.com/polk_gov" target="_blank" rel="noopener">
                         <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                         </svg>
-                        @niklabh
+                        @polk_gov
                     </a>
-                    <a href="mailto:niklabh811@gmail.com">
+                    <a href="mailto:hello@polkassembly.io">
                         <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>

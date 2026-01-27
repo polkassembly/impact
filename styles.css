@@ -271,18 +271,29 @@ body {
 
 .section-title {
     font-family: var(--font-mono);
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
+    color: var(--text-primary);
 }
 
 .title-prefix {
     color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.title-command {
+    color: var(--text-primary);
+}
+
+.title-comment {
+    color: var(--text-tertiary);
+    font-weight: 400;
+    font-style: italic;
 }
 
 .section-subtitle {
@@ -343,7 +354,98 @@ cite {
 }
 
 /* ============================================
-   IMPACT STATS
+   TERMINAL COMPONENTS
+   ============================================ */
+
+.terminal-window {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    font-family: var(--font-mono);
+}
+
+.terminal-header {
+    background: var(--bg-tertiary);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.terminal-dot:nth-child(1) {
+    background: #ff5f56;
+}
+
+.terminal-dot:nth-child(2) {
+    background: #ffbd2e;
+}
+
+.terminal-dot:nth-child(3) {
+    background: #27c93f;
+}
+
+.terminal-title {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.05em;
+}
+
+.terminal-body {
+    padding: 20px;
+    background: var(--bg-secondary);
+}
+
+.terminal-line {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.terminal-prompt {
+    color: var(--accent-primary);
+    margin-right: 8px;
+}
+
+.terminal-command {
+    color: var(--accent-tertiary);
+}
+
+.terminal-cursor {
+    color: var(--accent-primary);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.terminal-output {
+    margin: 15px 0;
+    padding-left: 20px;
+    border-left: 2px solid rgba(230, 0, 122, 0.3);
+}
+
+.terminal-comment {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ============================================
+   IMPACT STATS (Terminal Style)
    ============================================ */
 
 .impact-stats {
@@ -351,101 +453,45 @@ cite {
     background: var(--bg-secondary);
 }
 
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
+.stats-terminal {
+    max-width: 700px;
     margin: 0 auto;
 }
 
-.stat-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 40px 30px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: all var(--transition-medium);
-}
-
-.stat-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transition: transform var(--transition-medium);
-}
-
-.stat-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(230, 0, 122, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-
-.stat-card:hover::before {
-    transform: scaleX(1);
-}
-
-.stat-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    filter: grayscale(0.2);
-}
-
-.stat-card .stat-prefix,
-.stat-card .stat-suffix {
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     font-family: var(--font-mono);
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.stat-row:last-child {
+    border-bottom: none;
+}
+
+.stat-key {
+    color: var(--text-secondary);
+}
+
+.stat-value {
     color: var(--accent-primary);
-    display: inline;
-}
-
-.stat-number {
-    font-family: var(--font-mono);
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline;
-}
-
-.stat-label {
-    font-family: var(--font-mono);
-    font-size: 0.9rem;
     font-weight: 600;
-    letter-spacing: 0.15em;
-    color: var(--text-primary);
-    margin-top: 15px;
-    text-transform: uppercase;
 }
 
 .metrics-narrative {
-    margin-top: 50px;
+    margin-top: 30px;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 }
 
-.metrics-narrative p {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    line-height: 1.8;
-    color: var(--text-secondary);
-}
-
 /* Tree visualization section removed */
 
 /* ============================================
-   TIMELINE
+   TIMELINE (Git Log Style)
    ============================================ */
 
 .timeline-section {
@@ -453,115 +499,50 @@ cite {
     background: var(--bg-secondary);
 }
 
-.timeline {
-    position: relative;
+.timeline-terminal {
     max-width: 900px;
     margin: 0 auto;
-    padding: 40px 0;
 }
 
-.timeline-line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(
-        to bottom,
-        transparent,
-        var(--accent-primary) 10%,
-        var(--accent-primary) 90%,
-        transparent
-    );
-    transform: translateX(-50%);
-}
-
-.timeline-item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 60px;
-}
-
-.timeline-item:nth-child(odd) {
-    flex-direction: row-reverse;
-    text-align: right;
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-    padding-right: 60px;
-    padding-left: 0;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    padding-left: 60px;
-}
-
-.timeline-marker {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    background: var(--accent-primary);
-    border-radius: 50%;
-    border: 4px solid var(--bg-secondary);
-    box-shadow: 0 0 20px var(--accent-primary);
-    z-index: 1;
-}
-
-.timeline-content {
-    width: 45%;
+.git-log {
     background: var(--bg-card);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
     padding: 30px;
-    border-radius: 12px;
-    transition: all var(--transition-medium);
-}
-
-.timeline-content:hover {
-    border-color: var(--accent-primary);
-    box-shadow: 0 10px 30px rgba(230, 0, 122, 0.2);
-}
-
-.timeline-year {
     font-family: var(--font-mono);
-    font-size: 2rem;
-    font-weight: 700;
+}
+
+.git-commit {
+    display: flex;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-fast);
+}
+
+.git-commit:last-child {
+    border-bottom: none;
+}
+
+.git-commit:hover {
+    background: rgba(230, 0, 122, 0.05);
+    margin: 0 -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+}
+
+.commit-hash {
     color: var(--accent-primary);
-    display: block;
-    margin-bottom: 10px;
+    font-weight: 600;
+    min-width: 60px;
+    font-size: 0.9rem;
 }
 
-.timeline-content p {
-    font-size: 1rem;
+.commit-message {
     color: var(--text-secondary);
-    line-height: 1.7;
-}
-
-/* Mobile Timeline */
-@media (max-width: 768px) {
-    .timeline-line {
-        left: 20px;
-    }
-    
-    .timeline-item,
-    .timeline-item:nth-child(odd) {
-        flex-direction: row;
-        text-align: left;
-    }
-    
-    .timeline-marker {
-        left: 20px;
-    }
-    
-    .timeline-content,
-    .timeline-item:nth-child(odd) .timeline-content {
-        width: calc(100% - 60px);
-        padding-left: 30px;
-        padding-right: 30px;
-        margin-left: 50px;
-    }
+    flex: 1;
+    font-size: 0.95rem;
 }
 
 /* ============================================
@@ -575,18 +556,9 @@ cite {
         var(--bg-primary);
 }
 
-.github-stats {
-    display: flex;
-    justify-content: center;
-}
-
-.github-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 40px;
-    max-width: 600px;
-    width: 100%;
+.github-terminal {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .repo-header {
@@ -704,87 +676,54 @@ cite {
     background: var(--bg-secondary);
 }
 
-.networks-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    max-width: 1100px;
+.networks-terminal {
+    max-width: 700px;
     margin: 0 auto;
 }
 
-.network-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 30px 25px;
-    text-align: center;
-    transition: all var(--transition-medium);
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
+.networks-list {
+    margin-top: 15px;
 }
 
-.network-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 50% 0%, rgba(230, 0, 122, 0.05) 0%, transparent 70%);
-    opacity: 0;
-    transition: opacity var(--transition-medium);
-}
-
-.network-card:hover::before {
-    opacity: 1;
-}
-
-.network-card.primary {
-    border-color: var(--accent-primary);
-    background: linear-gradient(135deg, rgba(230, 0, 122, 0.15) 0%, rgba(85, 43, 191, 0.05) 100%);
-    box-shadow: 0 0 30px rgba(230, 0, 122, 0.1);
-}
-
-.network-card.more-networks {
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0.15);
-    background: var(--bg-card);
-    opacity: 0.7;
-    cursor: default;
+.network-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.network-card.more-networks:hover {
-    transform: none;
-    border-color: rgba(255, 255, 255, 0.15);
-    box-shadow: none;
-    opacity: 0.8;
-}
-
-.network-subtitle {
+    gap: 15px;
+    padding: 10px 0;
     font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all var(--transition-fast);
 }
 
+.network-item:last-child {
+    border-bottom: none;
+}
 
-.network-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-primary);
-    box-shadow: 0 10px 40px rgba(230, 0, 122, 0.2);
+.network-item:hover {
+    background: rgba(230, 0, 122, 0.05);
+    margin: 0 -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+}
+
+.network-badge {
+    color: var(--accent-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 .network-name {
+    color: var(--text-primary);
     font-family: var(--font-mono);
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.network-item.muted .network-name {
+    color: var(--text-tertiary);
+    font-style: italic;
 }
 
 /* Network badge removed - simplified design */
@@ -815,143 +754,143 @@ cite {
 
 .team-section-title {
     font-family: var(--font-mono);
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 500;
+    letter-spacing: 0.05em;
     margin-bottom: 30px;
-    color: var(--accent-primary);
-    text-transform: uppercase;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Founders Section */
+/* Founders Section (Terminal Style) */
 .founders-section {
     margin-bottom: 80px;
 }
 
-.founders-grid {
+.founders-terminal {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-.founder-card {
-    background: var(--bg-card);
-    border: 1px solid rgba(230, 0, 122, 0.2);
-    border-radius: 20px;
-    padding: 40px;
-    text-align: center;
-    transition: all var(--transition-medium);
-    position: relative;
-    overflow: hidden;
+.founder-terminal-card {
+    width: 100%;
 }
 
-.founder-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: var(--gradient-primary);
+.founder-info-terminal {
+    margin: 10px 0;
 }
 
-.founder-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-primary);
-    box-shadow: 0 20px 50px rgba(230, 0, 122, 0.2);
-}
-
-.founder-avatar {
-    width: 100px;
-    height: 100px;
-    background: var(--gradient-primary);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.founder-name-terminal {
     font-family: var(--font-mono);
+    font-size: 1.2rem;
     font-weight: 700;
-    font-size: 2rem;
-    margin: 0 auto 20px;
-    box-shadow: 0 10px 30px rgba(230, 0, 122, 0.3);
+    color: var(--accent-primary);
+    margin-bottom: 5px;
 }
 
-.founder-info {
-    margin-top: 20px;
+.founder-role-terminal {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
-.founder-name {
+.founder-statement-terminal {
+    margin: 15px 0;
+}
+
+.founder-statement-title {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-primary);
-    display: block;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
+
+.founder-statement-terminal p {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.founder-social-terminal {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.social-link-terminal {
+    color: var(--accent-tertiary);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    transition: color var(--transition-fast);
+}
+
+.social-link-terminal:hover {
+    color: var(--accent-primary);
 }
 
 
-/* Founding Team Section */
+/* Contributors Section (Terminal Style) */
 .founding-team-section {
     margin-bottom: 80px;
 }
 
-.founding-team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.contributors-terminal {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.founding-member {
-    background: var(--bg-card);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 25px;
+.contributors-list-terminal {
+    margin-top: 15px;
+}
+
+.contributor-line {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    transition: all var(--transition-medium);
-}
-
-.founding-member:hover {
-    transform: translateY(-3px);
-    border-color: rgba(230, 0, 122, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.member-avatar-small {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-primary);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     font-family: var(--font-mono);
-    font-weight: 700;
-    font-size: 1.2rem;
-    flex-shrink: 0;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
 }
 
-.member-details {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    flex: 1;
+.contributor-line:last-child {
+    border-bottom: none;
 }
 
-.member-name-small {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    font-weight: 600;
+.contributor-line:hover {
+    background: rgba(230, 0, 122, 0.05);
+    margin: 0 -15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+}
+
+.contributor-line .contributor-name {
     color: var(--text-primary);
 }
 
-.member-role-small {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--text-tertiary);
+.contributor-link {
+    color: var(--accent-tertiary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.contributor-link:hover {
+    color: var(--accent-primary);
 }
 
 /* Contributors Section */
@@ -969,6 +908,18 @@ cite {
     text-align: center;
     margin-bottom: 30px;
     line-height: 1.6;
+}
+
+.founding-team-section .contributors-intro {
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.founding-team-section .contributors-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
 
 .contributors-list {
@@ -1053,7 +1004,7 @@ cite {
 }
 
 /* ============================================
-   MANIFESTO SECTION
+   MANIFESTO SECTION (Terminal Style)
    ============================================ */
 
 .manifesto-section {
@@ -1063,28 +1014,30 @@ cite {
         var(--bg-primary);
 }
 
-.manifesto-content {
+.manifesto-terminal {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.manifesto-header {
-    margin-bottom: 40px;
+.manifesto-content-terminal {
+    margin: 15px 0;
 }
 
-.manifesto-header h2 {
+.manifesto-title-terminal {
     font-family: var(--font-mono);
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
     letter-spacing: 0.1em;
     font-weight: 600;
+    color: var(--accent-primary);
+    margin-bottom: 20px;
 }
 
-.manifesto-text p {
-    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
-    line-height: 1.9;
-    margin-bottom: 25px;
+.manifesto-content-terminal p {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    line-height: 1.8;
+    margin-bottom: 20px;
     color: var(--text-secondary);
+    font-family: var(--font-display);
 }
 
 /* ============================================
@@ -1218,54 +1171,87 @@ cite {
 }
 
 @media (max-width: 768px) {
-    .stats-grid {
+    .hero {
+        padding: 60px 20px 40px;
+        min-height: auto;
+    }
+    
+    .glitch {
+        font-size: clamp(2rem, 15vw, 4rem);
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+        margin-top: 15px;
+    }
+    
+    .hero-years {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    
+    .hero-tagline {
+        margin-top: 25px;
+        font-size: 0.85rem;
+    }
+    
+    .hero-note {
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+    
+    .hero-note p {
+        font-size: 0.9rem;
+    }
+    
+    .terminal-body {
+        padding: 15px;
+    }
+    
+    .terminal-line {
+        font-size: 0.85rem;
+    }
+    
+    .founders-terminal {
         grid-template-columns: 1fr;
+        gap: 25px;
     }
     
-    .stat-card {
-        padding: 30px 20px;
+    .founder-statement-terminal {
+        font-size: 0.85rem;
     }
     
-    .networks-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    
-    .founders-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .founding-team-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .contributors-list {
-        grid-template-columns: 1fr;
-    }
-    
-    .contributors-section {
-        padding: 30px 20px;
-    }
-    
-    .repo-links-secondary {
+    .git-commit {
         flex-direction: column;
+        gap: 8px;
     }
     
-    .repo-links-secondary .repo-link-secondary {
+    .commit-hash {
         min-width: auto;
     }
     
     .footer-content {
         text-align: center;
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .footer-signature {
         text-align: center;
     }
+    
+    .section-title {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 480px) {
     .glitch {
-        font-size: 2.5rem;
+        font-size: clamp(1.8rem, 12vw, 2.5rem);
     }
     
     .hero-years {
@@ -1277,12 +1263,32 @@ cite {
         transform: rotate(90deg);
     }
     
-    .repo-stats {
-        grid-template-columns: 1fr;
+    .terminal-body {
+        padding: 12px;
     }
     
-    .networks-grid {
-        grid-template-columns: 1fr 1fr;
+    .terminal-line {
+        font-size: 0.8rem;
+    }
+    
+    .stat-row {
+        font-size: 0.85rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .git-commit {
+        font-size: 0.85rem;
+    }
+    
+    .founder-statement-terminal {
+        font-size: 0.8rem;
+    }
+    
+    .contributor-line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
     }
 }
 
